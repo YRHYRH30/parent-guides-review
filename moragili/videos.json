@@ -1,6 +1,27 @@
 {
   "books": [
     {
+      "id": "endings",
+      "name": "בחירת סיום",
+      "title": "3 אפשרויות · לבחור אחת",
+      "poster": "endings.jpg",
+      "duration": "0:08",
+      "versions": [
+        {
+          "file": "ending-a.mp4",
+          "label": "א · חותמת ערוץ (ריבוע לבן על סגול + פעמונים)"
+        },
+        {
+          "file": "ending-b.mp4",
+          "label": "ב · בועות דיבור (בועות שמתפוצצות ללוגו + מיתרים)"
+        },
+        {
+          "file": "ending-c.mp4",
+          "label": "ג · הספר נסגר (כריכה נסגרת + פסנתר)"
+        }
+      ]
+    },
+    {
       "id": "dialogue",
       "name": "שיטת הדיאלוג",
       "title": "Dialogue · Let's Talk",
