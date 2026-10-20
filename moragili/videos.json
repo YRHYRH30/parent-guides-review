@@ -1,36 +1,19 @@
 {
   "books": [
     {
-      "id": "endings",
-      "name": "בחירת סיום",
-      "title": "3 אפשרויות · לבחור אחת",
-      "poster": "endings.jpg",
-      "duration": "0:08",
-      "versions": [
-        {
-          "file": "ending-a.mp4",
-          "label": "א · חותמת ערוץ (ריבוע לבן על סגול + פעמונים)"
-        },
-        {
-          "file": "ending-b.mp4",
-          "label": "ב · בועות דיבור (בועות שמתפוצצות ללוגו + מיתרים)"
-        },
-        {
-          "file": "ending-c.mp4",
-          "label": "ג · הספר נסגר (כריכה נסגרת + פסנתר)"
-        }
-      ]
-    },
-    {
       "id": "dialogue",
       "name": "שיטת הדיאלוג",
       "title": "Dialogue · Let's Talk",
       "poster": "dialogue.jpg",
-      "duration": "1:35",
+      "duration": "1:34",
       "versions": [
         {
           "file": "dialogue-v2.mp4",
-          "label": "גרסה 2 — 20.10 (הנוכחית)"
+          "label": "גרסה 2 — 20.10"
+        },
+        {
+          "file": "dialogue-v3.mp4",
+          "label": "גרסה 3 — 20.10, סיום חדש (הנוכחית)"
         }
       ]
     },
@@ -39,7 +22,7 @@
       "name": "Toyland",
       "title": "כיתה א׳ · Youngsters Plus",
       "poster": "toyland.jpg",
-      "duration": "1:10",
+      "duration": "1:09",
       "versions": [
         {
           "file": "toyland-v3.mp4",
@@ -47,7 +30,11 @@
         },
         {
           "file": "toyland-v4.mp4",
-          "label": "גרסה 4 — 20.10, סיום רך (הנוכחית)"
+          "label": "גרסה 4 — 20.10, סיום רך"
+        },
+        {
+          "file": "toyland-v5.mp4",
+          "label": "גרסה 5 — 20.10, כריכה סגולה + סיום חדש (הנוכחית)"
         }
       ]
     },
@@ -56,7 +43,7 @@
       "name": "Animal Land",
       "title": "גן חובה · Youngsters",
       "poster": "animal-land.jpg",
-      "duration": "1:15",
+      "duration": "1:13",
       "versions": [
         {
           "file": "animal-land-v4.mp4",
@@ -64,7 +51,11 @@
         },
         {
           "file": "animal-land-v5.mp4",
-          "label": "גרסה 5 — 20.10, סיום רך (הנוכחית)"
+          "label": "גרסה 5 — 20.10, סיום רך"
+        },
+        {
+          "file": "animal-land-v6.mp4",
+          "label": "גרסה 6 — 20.10, סיום חדש (הנוכחית)"
         }
       ]
     }
