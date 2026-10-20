@@ -28,7 +28,7 @@ h1 .en{direction:ltr;unicode-bidi:isolate;white-space:nowrap}
 #status{font-size:13px;color:var(--mut);white-space:nowrap;align-self:flex-start}
 
 /* ---- בחירת ספר ---- */
-.books{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:18px}
+.books{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:18px}
 .book{position:relative;display:flex;flex-direction:column;background:var(--card);border:2px solid var(--line);border-radius:var(--r);padding:0 0 10px;cursor:pointer;font:inherit;color:var(--ink);text-align:start;overflow:hidden;transition:transform .12s,box-shadow .12s,border-color .12s}
 .book:hover{transform:translateY(-2px);box-shadow:0 8px 20px -10px var(--shadow)}
 .book img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--soft)}
@@ -104,7 +104,7 @@ audio{width:100%;margin-top:8px;height:38px}
     <img class="logo" src="logo.png" alt="מורה גילי">
     <div class="ttl">
       <h1>סרטוני הדרכה להורים</h1>
-      <div class="sub"><span class="en">Toyland · Animal Land</span> — סקירה והערות תיקון. עוצרים · כותבים · ממשיכים — הטיימקוד נקבע לבד. אפשר לצלם פריים, לצרף תמונות ולהקליט.</div>
+      <div class="sub">שיטת הדיאלוג · <span class="en">Toyland · Animal Land</span> — סקירה והערות תיקון. עוצרים · כותבים · ממשיכים — הטיימקוד נקבע לבד. אפשר לצלם פריים, לצרף תמונות ולהקליט.</div>
     </div>
     <span id="status"></span>
   </header>
