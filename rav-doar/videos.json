@@ -1,0 +1,43 @@
+{
+  "books": [
+    {
+      "id": "A",
+      "name": "מעשר כספים",
+      "title": "מקור וחיוב",
+      "poster": "A.jpg",
+      "duration": "1:49",
+      "versions": [
+        {
+          "file": "A-v5.mp4",
+          "label": "גרסה 5 (הנוכחית)"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "name": "תשלום עליות",
+      "title": "תשלום עליות מכספי מעשר",
+      "poster": "B.jpg",
+      "duration": "0:42",
+      "versions": [
+        {
+          "file": "B-v5.mp4",
+          "label": "גרסה 5 (הנוכחית)"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "name": "חובה לתת צדקה",
+      "title": "חובה לתת צדקה",
+      "poster": "C.jpg",
+      "duration": "1:02",
+      "versions": [
+        {
+          "file": "C-v5.mp4",
+          "label": "גרסה 5 (הנוכחית)"
+        }
+      ]
+    }
+  ]
+}
