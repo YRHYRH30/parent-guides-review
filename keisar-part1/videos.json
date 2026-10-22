@@ -12,44 +12,6 @@
           "label": "חלקים 1–2 720p (הנוכחית)"
         }
       ]
-    },
-    {
-      "id": "part1",
-      "name": "Part 1",
-      "title": "חלק 1",
-      "poster": "part1.jpg",
-      "duration": "5:00",
-      "versions": [
-        {
-          "file": "part1-min1-draft.mp4",
-          "label": "דקה 1 (טיוטה)"
-        },
-        {
-          "file": "part1-v2-720p.mp4",
-          "label": "חלק 1 v2 720p"
-        },
-        {
-          "file": "part1-v3-720p.mp4",
-          "label": "חלק 1 v3 720p (הנוכחית)"
-        }
-      ]
-    },
-    {
-      "id": "part2",
-      "name": "Part 2",
-      "title": "חלק 2",
-      "poster": "part2.jpg",
-      "duration": "5:00",
-      "versions": [
-        {
-          "file": "part2-v1-720p.mp4",
-          "label": "חלק 2 v1 720p"
-        },
-        {
-          "file": "part2-v2-720p.mp4",
-          "label": "חלק 2 v2 720p (הנוכחית)"
-        }
-      ]
     }
   ]
 }
