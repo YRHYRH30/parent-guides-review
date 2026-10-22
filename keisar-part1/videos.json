@@ -1,6 +1,19 @@
 {
   "books": [
     {
+      "id": "parts12",
+      "name": "Parts 1-2",
+      "title": "חלקים 1–2 (10 דקות)",
+      "poster": "parts12.jpg",
+      "duration": "10:00",
+      "versions": [
+        {
+          "file": "parts12-720p.mp4",
+          "label": "חלקים 1–2 720p (הנוכחית)"
+        }
+      ]
+    },
+    {
       "id": "part1",
       "name": "Part 1",
       "title": "חלק 1",
