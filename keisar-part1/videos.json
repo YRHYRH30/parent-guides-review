@@ -30,7 +30,11 @@
       "versions": [
         {
           "file": "part2-v1-720p.mp4",
-          "label": "חלק 2 v1 720p (הנוכחית)"
+          "label": "חלק 2 v1 720p"
+        },
+        {
+          "file": "part2-v2-720p.mp4",
+          "label": "חלק 2 v2 720p (הנוכחית)"
         }
       ]
     }
