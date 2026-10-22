@@ -20,6 +20,19 @@
           "label": "חלק 1 v3 720p (הנוכחית)"
         }
       ]
+    },
+    {
+      "id": "part2",
+      "name": "Part 2",
+      "title": "חלק 2",
+      "poster": "part2.jpg",
+      "duration": "5:00",
+      "versions": [
+        {
+          "file": "part2-v1-720p.mp4",
+          "label": "חלק 2 v1 720p (הנוכחית)"
+        }
+      ]
     }
   ]
 }
