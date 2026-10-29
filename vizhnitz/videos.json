@@ -1,0 +1,17 @@
+{
+  "books": [
+    {
+      "id": "tour",
+      "name": "בית מדרש ויזניץ",
+      "title": "סיור · אשדוד",
+      "poster": "tour.jpg",
+      "duration": "2:03",
+      "versions": [
+        {
+          "file": "tour-v1.mp4",
+          "label": "גרסה 1 — 29.10, טיוטת Seedance 480p (הנוכחית)"
+        }
+      ]
+    }
+  ]
+}
