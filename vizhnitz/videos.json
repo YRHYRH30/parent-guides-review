@@ -49,7 +49,11 @@
         },
         {
           "file": "tour-v11.mp4",
-          "label": "גרסה 11 — 30.10, גמר 4K: הגדלה ב־Topaz + 360 ועומק ברזולוציה מלאה (באתר בתצוגה מוקטנת) (הנוכחית)"
+          "label": "גרסה 11 — 30.10, גמר 4K: הגדלה ב־Topaz + 360 ועומק ברזולוציה מלאה (באתר בתצוגה מוקטנת)"
+        },
+        {
+          "file": "https://github.com/YRHYRH30/parent-guides-review/releases/download/vizhnitz-4k-v11/vizhnitz-tour-4k-v11.mp4",
+          "label": "גרסה 11 · 4K מלא (3840×2160) — גמר (הנוכחית)"
         }
       ]
     }
