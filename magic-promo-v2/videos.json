@@ -5,7 +5,7 @@
       "name": "Promo v2",
       "title": "סרטון תדמית — פתיחת שנה",
       "poster": "poster.jpg",
-      "duration": "1:25",
+      "duration": "1:18",
       "versions": [
         {
           "file": "magic-v2-draft1.mp4",
@@ -17,7 +17,15 @@
         },
         {
           "file": "magic-v2-draft3.mp4",
-          "label": "טיוטה 3 (הנוכחית)"
+          "label": "טיוטה 3"
+        },
+        {
+          "file": "magic-v2-draft4.mp4",
+          "label": "טיוטה 4"
+        },
+        {
+          "file": "magic-v2-draft5.mp4",
+          "label": "טיוטה 5 (הנוכחית)"
         }
       ]
     }
