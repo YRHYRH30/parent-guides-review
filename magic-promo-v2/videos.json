@@ -1,0 +1,25 @@
+{
+  "books": [
+    {
+      "id": "promo",
+      "name": "Promo v2",
+      "title": "סרטון תדמית — פתיחת שנה",
+      "poster": "poster.jpg",
+      "duration": "1:25",
+      "versions": [
+        {
+          "file": "magic-v2-draft1.mp4",
+          "label": "טיוטה 1"
+        },
+        {
+          "file": "magic-v2-draft2.mp4",
+          "label": "טיוטה 2"
+        },
+        {
+          "file": "magic-v2-draft3.mp4",
+          "label": "טיוטה 3 (הנוכחית)"
+        }
+      ]
+    }
+  ]
+}
