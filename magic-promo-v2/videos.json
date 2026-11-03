@@ -33,7 +33,11 @@
         },
         {
           "file": "magic-v2-draft7.mp4",
-          "label": "טיוטה 7 (הנוכחית)"
+          "label": "טיוטה 7"
+        },
+        {
+          "file": "magic-v2-draft8.mp4",
+          "label": "טיוטה 8 (הנוכחית)"
         }
       ]
     }
