@@ -29,7 +29,11 @@
         },
         {
           "file": "magic-v2-draft6.mp4",
-          "label": "טיוטה 6 (הנוכחית)"
+          "label": "טיוטה 6"
+        },
+        {
+          "file": "magic-v2-draft7.mp4",
+          "label": "טיוטה 7 (הנוכחית)"
         }
       ]
     }
