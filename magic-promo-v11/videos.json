@@ -1,0 +1,43 @@
+{
+  "books": [
+    {
+      "id": "v10d",
+      "name": "v10d",
+      "title": "כיוון 1: הסגנון המקורי (פס סגול, מדרגות סגולות)",
+      "poster": "poster-v10d.jpg",
+      "duration": "1:00",
+      "versions": [
+        {
+          "file": "magic-v10d.mp4",
+          "label": "גרסה 1"
+        }
+      ]
+    },
+    {
+      "id": "v11A2",
+      "name": "v11A2",
+      "title": "כיוון 2: ספר קסום (שמי לילה, גיר, שביל כוכבים)",
+      "poster": "poster-v11A2.jpg",
+      "duration": "1:00",
+      "versions": [
+        {
+          "file": "magic-v11A2.mp4",
+          "label": "גרסה 1"
+        }
+      ]
+    },
+    {
+      "id": "v11B2",
+      "name": "v11B2",
+      "title": "כיוון 3: עיתוני־קינטי (פסים אלכסוניים, מדרגות, 10 ענק)",
+      "poster": "poster-v11B2.jpg",
+      "duration": "1:00",
+      "versions": [
+        {
+          "file": "magic-v11B2.mp4",
+          "label": "גרסה 1"
+        }
+      ]
+    }
+  ]
+}
