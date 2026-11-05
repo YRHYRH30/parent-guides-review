@@ -1,0 +1,35 @@
+{
+  "site_id": "keisar-parts345",
+  "page_title": "מעשה בקיסר ומלך — חלקים 3–5",
+  "heading": "מעשה בקיסר ומלך — חלקים 3–5",
+  "subtitle": "סרטון מלא · חלק 3 0:00 · חלק 4 5:00 · חלק 5 10:00 · סקירה עם טיימקודים. עוצרים · כותבים · ממשיכים.",
+  "logo": "logo.png",
+  "logo_alt": "מעשה בקיסר ומלך",
+  "store_url": "https://riddle-store-yh.netlify.app/api/store?id=",
+  "notes_key": "c32aaedd-1f2b-4d5d-a765-d99808ff9969",
+  "theme": {
+    "BRAND": "#5a3a12",
+    "BTN": "#5a3a12",
+    "ACCENT": "#c9962e",
+    "CLIENT_NAME": "יהודה"
+  },
+  "videos": [
+    {
+      "id": "parts345",
+      "name": "Parts 3-5",
+      "title": "מעשה בקיסר ומלך — חלקים 3–5 (12:47)",
+      "poster": "parts345-poster-v2.jpg",
+      "versions": [
+        {
+          "file": "parts345-combined-v2-site.mp4",
+          "label": "חלקים 3–5 v1 720p (הנוכחית)"
+        }
+      ]
+    }
+  ],
+  "project": "מעשה בקיסר ומלך — חלקים 3–5",
+  "client": "בן המלך",
+  "agent_name": "סטודיו וידאו",
+  "agent_id": "b65dc4ff-6f87-482b-8cfe-184b1ecf543e",
+  "wa_number": "972548469516"
+}
