@@ -1,0 +1,43 @@
+{
+  "books": [
+    {
+      "id": "v12_10d",
+      "name": "v12_10d",
+      "title": "כיוון 1: סגנון מקורי (פס סגול, מדרגות)",
+      "poster": "poster-v12-10d.jpg",
+      "duration": "1:00",
+      "versions": [
+        {
+          "file": "magic-v12-10d.mp4",
+          "label": "גרסה 1"
+        }
+      ]
+    },
+    {
+      "id": "v12_A",
+      "name": "v12_A",
+      "title": "כיוון 2: ספר סיפורים קסום",
+      "poster": "poster-v12-A.jpg",
+      "duration": "1:00",
+      "versions": [
+        {
+          "file": "magic-v12-A.mp4",
+          "label": "גרסה 1"
+        }
+      ]
+    },
+    {
+      "id": "v12_B",
+      "name": "v12_B",
+      "title": "כיוון 3: עריכה מודרנית/קינטית",
+      "poster": "poster-v12-B.jpg",
+      "duration": "1:00",
+      "versions": [
+        {
+          "file": "magic-v12-B.mp4",
+          "label": "גרסה 1"
+        }
+      ]
+    }
+  ]
+}
