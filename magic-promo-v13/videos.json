@@ -1,0 +1,17 @@
+{
+  "books": [
+    {
+      "id": "v13",
+      "name": "v13",
+      "title": "v13: גרסה מרכזית (בסיס 10d + אימוצים מ־A/B)",
+      "poster": "poster-v13.jpg",
+      "duration": "1:00",
+      "versions": [
+        {
+          "file": "magic-v13.mp4",
+          "label": "גרסה 1"
+        }
+      ]
+    }
+  ]
+}
