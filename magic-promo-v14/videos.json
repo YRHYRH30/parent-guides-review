@@ -1,0 +1,17 @@
+{
+  "books": [
+    {
+      "id": "v14",
+      "name": "v14",
+      "title": "v14: תיקונים מאתר v13",
+      "poster": "poster-v14.jpg",
+      "duration": "1:00",
+      "versions": [
+        {
+          "file": "magic-v14.mp4",
+          "label": "גרסה 1"
+        }
+      ]
+    }
+  ]
+}
