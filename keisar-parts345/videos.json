@@ -9,7 +9,11 @@
       "versions": [
         {
           "file": "parts345-combined-v1-site.mp4",
-          "label": "גרסה לפני השדרוגים — v1 (הנוכחית)"
+          "label": "גרסה לפני השדרוגים — v1"
+        },
+        {
+          "file": "parts345-combined-v1-sfx-site.mp4",
+          "label": "v1 + אפקטים טבעיים מהספרייה החדשה (הנוכחית)"
         }
       ]
     }
