@@ -1,0 +1,17 @@
+{
+  "books": [
+    {
+      "id": "combined",
+      "name": "משולב · v18",
+      "title": "הסרטון הנוכחי — מפת שוטים",
+      "poster": "poster.jpg",
+      "duration": "1:00",
+      "versions": [
+        {
+          "file": "magic-v18.mp4",
+          "label": "משולב · v18 (הנוכחית)"
+        }
+      ]
+    }
+  ]
+}
