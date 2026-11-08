@@ -57,7 +57,15 @@
       "duration": 4,
       "replacement_duration": 4,
       "speech_basis": "תמלול מקומי חדש של שמע v18; תיקוני כתיב מול תסריט הקריינות. משפטים חוצים גבולות, לא תמלול מילה־מילה.",
-      "warning": "עכשיו תמונה סטטית — מומלץ בהחלפה לסרטון חי"
+      "warning": "עכשיו תמונה סטטית — מומלץ בהחלפה לסרטון חי",
+      "source_originals": [
+        {
+          "file": "originals/A5A1B1C9.jpg",
+          "id": "A5A1B1C9",
+          "replaces": "K_WIZ",
+          "label": "תמונת מקור נקייה"
+        }
+      ]
     },
     {
       "n": 4,
@@ -220,7 +228,15 @@
       "duration": 1.3167,
       "replacement_duration": 4,
       "speech_basis": "תמלול מקומי חדש של שמע v18; תיקוני כתיב מול תסריט הקריינות. משפטים חוצים גבולות, לא תמלול מילה־מילה.",
-      "warning": "עכשיו תמונה סטטית — מומלץ בהחלפה לסרטון חי"
+      "warning": "עכשיו תמונה סטטית — מומלץ בהחלפה לסרטון חי",
+      "source_originals": [
+        {
+          "file": "originals/A5FBB414.jpg",
+          "id": "A5FBB414",
+          "replaces": "P05",
+          "label": "תמונת מקור נקייה"
+        }
+      ]
     },
     {
       "n": 13,
@@ -239,7 +255,15 @@
       "duration": 1.1166,
       "replacement_duration": 4,
       "speech_basis": "תמלול מקומי חדש של שמע v18; תיקוני כתיב מול תסריט הקריינות. משפטים חוצים גבולות, לא תמלול מילה־מילה.",
-      "warning": "עכשיו תמונה סטטית — מומלץ בהחלפה לסרטון חי"
+      "warning": "עכשיו תמונה סטטית — מומלץ בהחלפה לסרטון חי",
+      "source_originals": [
+        {
+          "file": "originals/A5FBB414.jpg",
+          "id": "A5FBB414",
+          "replaces": "P05",
+          "label": "תמונת מקור נקייה"
+        }
+      ]
     },
     {
       "n": 14,
@@ -258,7 +282,15 @@
       "duration": 1.5667,
       "replacement_duration": 4,
       "speech_basis": "תמלול מקומי חדש של שמע v18; תיקוני כתיב מול תסריט הקריינות. משפטים חוצים גבולות, לא תמלול מילה־מילה.",
-      "warning": "עכשיו תמונה סטטית — מומלץ בהחלפה לסרטון חי"
+      "warning": "עכשיו תמונה סטטית — מומלץ בהחלפה לסרטון חי",
+      "source_originals": [
+        {
+          "file": "originals/A5FBB414.jpg",
+          "id": "A5FBB414",
+          "replaces": "P05",
+          "label": "תמונת מקור נקייה"
+        }
+      ]
     },
     {
       "n": 15,
@@ -388,7 +420,15 @@
       "duration": 0.65,
       "replacement_duration": 4,
       "speech_basis": "תמלול מקומי חדש של שמע v18; תיקוני כתיב מול תסריט הקריינות. משפטים חוצים גבולות, לא תמלול מילה־מילה.",
-      "warning": "עכשיו תמונה סטטית — מומלץ בהחלפה לסרטון חי"
+      "warning": "עכשיו תמונה סטטית — מומלץ בהחלפה לסרטון חי",
+      "source_originals": [
+        {
+          "file": "originals/A5239E78.jpg",
+          "id": "A5239E78",
+          "replaces": "P04",
+          "label": "תמונת מקור נקייה"
+        }
+      ]
     },
     {
       "n": 22,
@@ -407,7 +447,15 @@
       "duration": 1.35,
       "replacement_duration": 4,
       "speech_basis": "תמלול מקומי חדש של שמע v18; תיקוני כתיב מול תסריט הקריינות. משפטים חוצים גבולות, לא תמלול מילה־מילה.",
-      "warning": "עכשיו תמונה סטטית — מומלץ בהחלפה לסרטון חי"
+      "warning": "עכשיו תמונה סטטית — מומלץ בהחלפה לסרטון חי",
+      "source_originals": [
+        {
+          "file": "originals/A5239E78.jpg",
+          "id": "A5239E78",
+          "replaces": "P04",
+          "label": "תמונת מקור נקייה"
+        }
+      ]
     },
     {
       "n": 23,
@@ -426,7 +474,15 @@
       "duration": 2,
       "replacement_duration": 4,
       "speech_basis": "תמלול מקומי חדש של שמע v18; תיקוני כתיב מול תסריט הקריינות. משפטים חוצים גבולות, לא תמלול מילה־מילה.",
-      "warning": "עכשיו תמונה סטטית — מומלץ בהחלפה לסרטון חי"
+      "warning": "עכשיו תמונה סטטית — מומלץ בהחלפה לסרטון חי",
+      "source_originals": [
+        {
+          "file": "originals/A5239E78.jpg",
+          "id": "A5239E78",
+          "replaces": "P04",
+          "label": "תמונת מקור נקייה"
+        }
+      ]
     },
     {
       "n": 24,
@@ -652,6 +708,26 @@
         "K_BD",
         "P04",
         "P03"
+      ],
+      "source_originals": [
+        {
+          "file": "originals/A5A1B1C9.jpg",
+          "id": "A5A1B1C9",
+          "replaces": "K_WIZ",
+          "label": "תמונת מקור נקייה"
+        },
+        {
+          "file": "originals/A5FBB414.jpg",
+          "id": "A5FBB414",
+          "replaces": "P05",
+          "label": "תמונת מקור נקייה"
+        },
+        {
+          "file": "originals/A5239E78.jpg",
+          "id": "A5239E78",
+          "replaces": "P04",
+          "label": "תמונת מקור נקייה"
+        }
       ]
     },
     {
@@ -677,6 +753,26 @@
         "K_BD",
         "P04",
         "P03"
+      ],
+      "source_originals": [
+        {
+          "file": "originals/A5A1B1C9.jpg",
+          "id": "A5A1B1C9",
+          "replaces": "K_WIZ",
+          "label": "תמונת מקור נקייה"
+        },
+        {
+          "file": "originals/A5FBB414.jpg",
+          "id": "A5FBB414",
+          "replaces": "P05",
+          "label": "תמונת מקור נקייה"
+        },
+        {
+          "file": "originals/A5239E78.jpg",
+          "id": "A5239E78",
+          "replaces": "P04",
+          "label": "תמונת מקור נקייה"
+        }
       ]
     },
     {
@@ -702,6 +798,26 @@
         "K_BD",
         "P04",
         "P03"
+      ],
+      "source_originals": [
+        {
+          "file": "originals/A5A1B1C9.jpg",
+          "id": "A5A1B1C9",
+          "replaces": "K_WIZ",
+          "label": "תמונת מקור נקייה"
+        },
+        {
+          "file": "originals/A5FBB414.jpg",
+          "id": "A5FBB414",
+          "replaces": "P05",
+          "label": "תמונת מקור נקייה"
+        },
+        {
+          "file": "originals/A5239E78.jpg",
+          "id": "A5239E78",
+          "replaces": "P04",
+          "label": "תמונת מקור נקייה"
+        }
       ]
     }
   ]
