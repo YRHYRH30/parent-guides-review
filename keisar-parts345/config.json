@@ -21,12 +21,12 @@
       "poster": "parts345-poster.jpg",
       "versions": [
         {
-          "file": "parts345-combined-v1-site.mp4",
-          "label": "גרסה לפני השדרוגים — v1"
+          "file": "parts345-combined-v1-sfx-site.mp4",
+          "label": "v1 + אפקטים טבעיים מהספרייה החדשה"
         },
         {
-          "file": "parts345-combined-v1-sfx-site.mp4",
-          "label": "v1 + אפקטים טבעיים מהספרייה החדשה (הנוכחית)"
+          "file": "parts345-combined-v1-site.mp4",
+          "label": "הגרסה המקורית שנשלחה בוואטסאפ — v1"
         }
       ]
     }
