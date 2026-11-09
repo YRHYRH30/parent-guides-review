@@ -2,7 +2,7 @@
   "site_id": "keisar-parts345",
   "page_title": "מעשה בקיסר ומלך — חלקים 3–5",
   "heading": "מעשה בקיסר ומלך — חלקים 3–5",
-  "subtitle": "סרטון מלא · חלק 3 0:00 · חלק 4 5:00 · חלק 5 10:00 · סקירה עם טיימקודים. עוצרים · כותבים · ממשיכים.",
+  "subtitle": "מחולק לקטעים של ~3–4 דק׳ · קטע 1 0:00 · קטע 2 3:11 · קטע 3 6:23 · קטע 4 9:23 · גם מלא 12:47. עוצרים · כותבים · ממשיכים.",
   "logo": "logo.png",
   "logo_alt": "מעשה בקיסר ומלך",
   "store_url": "https://riddle-store-yh.netlify.app/api/store?id=",
@@ -15,10 +15,63 @@
   },
   "videos": [
     {
+      "id": "seg1",
+      "name": "קטע 1",
+      "title": "קטע 1 מתוך 4 — בריחה, סערה והגזלנים (3:11)",
+      "poster": "keisar345-seg1-poster.jpg",
+      "duration": "3:11",
+      "versions": [
+        {
+          "file": "keisar345-seg1-v1.mp4",
+          "label": "v1 מקורי (ואטסאפ) — קטע"
+        }
+      ]
+    },
+    {
+      "id": "seg2",
+      "name": "קטע 2",
+      "title": "קטע 2 מתוך 4 — היין, התחפושת ומפגש הספינות (3:12)",
+      "poster": "keisar345-seg2-poster.jpg",
+      "duration": "3:12",
+      "versions": [
+        {
+          "file": "keisar345-seg2-v1.mp4",
+          "label": "v1 מקורי (ואטסאפ) — קטע"
+        }
+      ]
+    },
+    {
+      "id": "seg3",
+      "name": "קטע 3",
+      "title": "קטע 3 מתוך 4 — הרופא, המשתה והנישואין (3:00)",
+      "poster": "keisar345-seg3-poster.jpg",
+      "duration": "3:00",
+      "versions": [
+        {
+          "file": "keisar345-seg3-v1.mp4",
+          "label": "v1 מקורי (ואטסאפ) — קטע"
+        }
+      ]
+    },
+    {
+      "id": "seg4",
+      "name": "קטע 4",
+      "title": "קטע 4 מתוך 4 — החזרה והחתונה הגדולה (3:24)",
+      "poster": "keisar345-seg4-poster.jpg",
+      "duration": "3:24",
+      "versions": [
+        {
+          "file": "keisar345-seg4-v1.mp4",
+          "label": "v1 מקורי (ואטסאפ) — קטע"
+        }
+      ]
+    },
+    {
       "id": "parts345",
       "name": "Parts 3-5",
-      "title": "מעשה בקיסר ומלך — חלקים 3–5 (12:47)",
+      "title": "מעשה בקיסר ומלך — חלקים 3–5 מלא (12:47)",
       "poster": "parts345-poster.jpg",
+      "duration": "12:47",
       "versions": [
         {
           "file": "parts345-combined-v1-sfx-site.mp4",
@@ -26,7 +79,7 @@
         },
         {
           "file": "parts345-combined-v1-site.mp4",
-          "label": "הגרסה המקורית שנשלחה בוואטסאפ — v1"
+          "label": "הגרסה המקורית שנשלחה בוואטסאפ — v1 (הנוכחית)"
         }
       ]
     }
