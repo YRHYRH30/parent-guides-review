@@ -1,0 +1,17 @@
+{
+  "books": [
+    {
+      "id": "toldot",
+      "name": "תולדות",
+      "title": "פרשת תולדות — 9:16 עם הקדשה",
+      "poster": "poster.jpg",
+      "duration": "4:09",
+      "versions": [
+        {
+          "file": "toldot_9x16.mp4",
+          "label": "9:16 עם הקדשה (הנוכחית)"
+        }
+      ]
+    }
+  ]
+}
