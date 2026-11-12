@@ -2,14 +2,27 @@
   "books": [
     {
       "id": "toldot",
-      "name": "תולדות",
-      "title": "פרשת תולדות — 9:16 עם הקדשה",
+      "name": "שורט 9:16",
+      "title": "שורט 9:16 — עם הקדשה",
       "poster": "poster.jpg",
       "duration": "4:09",
       "versions": [
         {
           "file": "toldot_9x16.mp4",
-          "label": "9:16 עם הקדשה (הנוכחית)"
+          "label": "עם הקדשה"
+        }
+      ]
+    },
+    {
+      "id": "toldot-16x9",
+      "name": "רגיל 16:9",
+      "title": "רגיל 16:9 — עם הקדשה",
+      "poster": "poster_16x9.jpg",
+      "duration": "4:09",
+      "versions": [
+        {
+          "file": "toldot_16x9.mp4",
+          "label": "עם הקדשה"
         }
       ]
     }
