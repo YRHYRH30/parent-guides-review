@@ -27,16 +27,18 @@ h1 .en{direction:ltr;unicode-bidi:isolate;white-space:nowrap}
 .sub{color:var(--mut);font-size:15px;margin-top:6px}
 #status{font-size:13px;color:var(--mut);white-space:nowrap;align-self:flex-start}
 
-/* ---- בחירת ספר ---- */
-.books{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:18px}
-.book{position:relative;display:flex;flex-direction:column;background:var(--card);border:2px solid var(--line);border-radius:var(--r);padding:0 0 10px;cursor:pointer;font:inherit;color:var(--ink);text-align:start;overflow:hidden;transition:transform .12s,box-shadow .12s,border-color .12s}
-.book:hover{transform:translateY(-2px);box-shadow:0 8px 20px -10px var(--shadow)}
-.book img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--soft)}
-.book .bn{font-weight:800;font-size:20px;color:var(--brand);margin:8px 12px 0;direction:ltr;text-align:start}
-.book .bt{font-size:14px;color:var(--mut);margin:0 12px;direction:rtl;text-align:start}
-.book .bd{font-size:13px;color:var(--mut);margin:2px 12px 0;direction:ltr;text-align:start;font-variant-numeric:tabular-nums}
+/* ---- בחירת סרטון (שורה קומפקטית) ---- */
+.toolbar{margin-bottom:14px}
+.books{display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:2px}
+.book{position:relative;display:flex;flex-direction:row;align-items:center;gap:8px;background:var(--card);border:2px solid var(--line);border-radius:14px;padding:4px 12px 4px 4px;cursor:pointer;font:inherit;color:var(--ink);text-align:start;overflow:hidden;flex:none;transition:transform .12s,box-shadow .12s,border-color .12s}
+.book:hover{transform:translateY(-1px);box-shadow:0 8px 20px -10px var(--shadow)}
+.book img{width:64px;height:48px;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--soft);border-radius:8px;flex:none}
+.book .bmeta{display:flex;flex-direction:column;min-width:0}
+.book .bn{font-weight:800;font-size:15px;color:var(--brand);margin:0;direction:ltr;text-align:start}
+.book .bt{display:none}
+.book .bd{font-size:12px;color:var(--mut);margin:0;direction:ltr;text-align:start;font-variant-numeric:tabular-nums}
 .book.on{border-color:var(--brand);box-shadow:0 0 0 3px var(--ring)}
-.book .cnt{position:absolute;top:8px;inset-inline-start:8px;min-width:28px;height:28px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:800;font-size:14px;display:none;align-items:center;justify-content:center;padding:0 8px;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.book .cnt{position:absolute;top:2px;inset-inline-start:2px;min-width:20px;height:20px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:800;font-size:11px;display:none;align-items:center;justify-content:center;padding:0 6px;box-shadow:0 2px 6px rgba(0,0,0,.25)}
 .book.has .cnt{display:flex}
 
 /* ---- נגן ---- */
@@ -45,7 +47,7 @@ video{width:min(100%,860px);aspect-ratio:4/3;background:#000;border-radius:var(-
 .card{background:var(--card);border:2px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
 .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 .speed{margin-top:16px}
-.vrow{margin:0 0 10px}
+.vrow{margin:8px 0 0}
 .hint{color:var(--mut);font-size:14px}
 
 /* ---- לשוניות ---- */
@@ -94,7 +96,7 @@ audio{width:100%;margin-top:8px;height:38px}
 
 @media(max-width:560px){
   .hero{flex-direction:column;align-items:flex-start;gap:10px}.logo{height:70px;max-width:70%}
-  .books{gap:8px}.book .bn{font-size:17px;margin:6px 8px 0}.book .bt,.book .bd{margin-inline:8px;font-size:12px}
+  .book img{width:56px;height:42px}.book .bn{font-size:14px}
 }
 
 /* ---------- עורך כתוביות ---------- */
@@ -116,6 +118,53 @@ body.hascap #capPanel{display:block}
 .cl .cx b{font-weight:900}
 .cl .cx mark{background:#ffe600;color:#000;padding:0 2px;border-radius:3px}
 @media(max-width:820px){body.hascap .vgrid{grid-template-columns:1fr}body.hascap .vgrid .stage{position:static}}
+
+/* ---------- שולחן עבודה: סרטון + הערות זה לצד זה, בלי גלילת דף ---------- */
+@media(min-width:1000px){
+  html,body{height:100%;overflow:hidden}
+  body{min-height:100dvh}
+  .wrap{max-width:none;width:100%;height:100vh;height:100dvh;margin:0;padding:8px 12px 10px;display:flex;flex-direction:column;gap:6px;overflow:hidden;box-sizing:border-box}
+  body.hascap .wrap{max-width:none}
+  .hero{gap:12px;margin-bottom:0;flex:none;align-items:center}
+  .logo{height:40px;max-width:18%}
+  h1{font-size:clamp(16px,1.7vw,22px)}
+  .sub{font-size:12px;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .toolbar{display:flex;align-items:center;gap:10px;flex:none;min-width:0;margin-bottom:0}
+  .books{flex:1;min-width:0;gap:6px}
+  .book{padding:3px 10px 3px 3px;border-radius:12px}
+  .book img{width:56px;height:42px}
+  .book .bn{font-size:13px}
+  .book .bd{font-size:11px}
+  .vrow{margin:0;flex:none;white-space:nowrap}
+  .workspace{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.7fr) minmax(320px,.85fr);gap:12px;overflow:hidden}
+  .player-col{display:flex;flex-direction:column;min-width:0;min-height:0;gap:8px}
+  .vgrid{flex:1;min-height:0;display:flex;flex-direction:column}
+  .stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;background:#000;border-radius:var(--r);border:3px solid var(--brand);box-shadow:0 14px 30px -16px var(--shadow);overflow:hidden}
+  video{width:100%;height:100%;max-width:100%;max-height:100%;aspect-ratio:auto;object-fit:contain;border:0;border-radius:0;box-shadow:none;background:#000}
+  .speed{margin-top:0;padding:6px 12px;flex:none}
+  .notes-col{display:flex;flex-direction:column;min-width:0;min-height:0;overflow:hidden;background:var(--card);border:2px solid var(--line);border-radius:var(--r);padding:10px 10px 8px}
+  .tabs{margin:0 0 8px;flex:none;gap:6px}
+  .tab{padding:6px 14px;font-size:15px}
+  .notes-col #write,.notes-col #list{flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+  .notes-col #write.hidden,.notes-col #list.hidden{display:none}
+  .notes-col .draft{flex:none;margin-bottom:8px;padding:10px}
+  .notes-col .draft .row{gap:6px}
+  .notes-col button.g,.notes-col select.g{padding:4px 10px;font-size:13px}
+  .notes-col textarea{min-height:72px;max-height:22vh;margin-top:8px;resize:vertical}
+  .notes-col #recent,.notes-col #all{flex:1;min-height:0;overflow-y:auto}
+  .notes-col #sendbox{flex:none;margin:8px 0 0;padding:8px}
+  .notes-col #sendbox .b{font-size:15px;padding:8px 16px}
+  body.hascap .vgrid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr);gap:10px;align-items:stretch}
+  body.hascap .vgrid .stage{position:static}
+  body.hascap .vgrid video{max-height:none}
+  body.hascap #capPanel{display:flex;flex-direction:column;min-height:0;overflow:hidden;height:auto}
+  body.hascap #capList{flex:1;max-height:none;overflow:auto}
+  body.hascap .captb{position:static}
+}
+@media(min-width:1000px) and (max-height:850px){
+  .notes-col .drop-hint{display:none}
+  .notes-col textarea{min-height:64px}
+}
 </style>
 </head>
 <body>
@@ -129,81 +178,89 @@ body.hascap #capPanel{display:block}
     <span id="status"></span>
   </header>
 
-  <nav class="books" id="books" aria-label="בחירת סרטון"></nav>
-
-  <div class="row vrow hidden" id="vrow"><b>🎬 גרסה:</b><select id="vsel" class="g"></select></div>
-  <div class="vgrid"><div class="stage"><video id="v" controls preload="metadata" playsinline></video></div>
-  <aside id="capPanel" aria-label="עורך כתוביות">
-    <div class="captb">
-      <b>📝 הכיתוב</b>
-      <button class="g" id="cB" title="סמנו מילים ולחצו"><b>B</b> הדגשה</button>
-      <button class="g" id="cH" title="סמנו מילים ולחצו">🖍 צבע</button>
-      <button class="g" id="cC" title="הסר הדגשות מהמילים המסומנות">✖ נקה</button>
-      <button class="g" id="cSplit" title="שימו את הסמן במקום החיתוך">✂ פצל שורה</button>
-      <button class="g" id="cMerge" title="מאחד את השורה הנוכחית עם הבאה">⤵ מזג עם הבאה</button>
-      <label class="hint"><input type="checkbox" id="cFollow" checked style="accent-color:var(--brand)"> גלילה עם הסרטון</label>
-      <span style="flex:1"></span>
-      <button class="g" id="cSave">💾 שמור</button>
-      <button class="g" id="cSrt">⬇ SRT</button>
-      <button class="g" id="cJson">⬇ JSON</button>
-      <span class="hint" id="cStat"></span>
-    </div>
-    <div id="capList"></div>
-  </aside></div>
-
-  <div class="card speed row">
-    <b>⚡ מהירות</b>
-    <button class="g" id="spM" aria-label="האט">−</button>
-    <input type="range" id="spR" min="0.5" max="2" step="0.1" value="1" style="flex:1;min-width:120px;accent-color:var(--brand)">
-    <button class="g" id="spP" aria-label="הגבר">+</button>
-    <span class="tc" id="spV">1.0x</span>
-    <button class="g" id="spReset">איפוס</button>
+  <div class="toolbar">
+    <nav class="books" id="books" aria-label="בחירת סרטון"></nav>
+    <div class="row vrow hidden" id="vrow"><b>🎬 גרסה:</b><select id="vsel" class="g"></select></div>
   </div>
 
-  <div class="tabs">
-    <button class="tab on" data-t="write">✍️ כתיבת הערות</button>
-    <button class="tab" data-t="list">📋 כל ההערות (<span id="cnt">0</span>)</button>
-  </div>
-
-  <section id="write">
-    <div class="card draft" id="draftCard">
-      <div class="row">
-        <span class="hint">טיימקוד:</span>
-        <input class="tc" id="dtc" value="0:00" title="אפשר לערוך ידנית">
-        <button class="g" id="sync">⏱ קח את הזמן הנוכחי</button>
-        <button class="g" id="back">⟲ 3 שניות אחורה</button>
-        <button class="g rec" id="rec">🎙 הקלט הערה קולית</button><span class="hint" id="recT"></span>
-        <button class="g" id="snap">📸 צלם פריים</button>
-        <button class="g" id="attach">📎 צרף קבצים / תמונות</button><input type="file" id="fin" multiple hidden>
-      </div>
-      <textarea id="dtxt" placeholder="עצרו את הסרטון — הטיימקוד נקבע אוטומטית. כתבו כאן מה לתקן…  (Ctrl/⌘+Enter לשליחה). אפשר להוסיף כמה הערות שרוצים."></textarea>
-      <div id="dfiles" class="files"></div>
-      <div class="hint" style="margin-top:6px">אפשר גם לגרור קבצים לכאן או להדביק תמונה (Ctrl/⌘+V)</div>
-      <div class="row" style="margin-top:10px">
-        <span class="hint">סוג:</span>
-        <div class="scope">
-          <label><input type="radio" name="scope" value="" checked><span>לא סימנתי — תחליט</span></label>
-          <label><input type="radio" name="scope" value="one"><span>רק כאן</span></label>
-          <label><input type="radio" name="scope" value="general"><span>הוראה כללית (בכל הסרטונים)</span></label>
+  <div class="workspace">
+    <div class="player-col">
+      <div class="vgrid"><div class="stage"><video id="v" controls preload="metadata" playsinline></video></div>
+      <aside id="capPanel" aria-label="עורך כתוביות">
+        <div class="captb">
+          <b>📝 הכיתוב</b>
+          <button class="g" id="cB" title="סמנו מילים ולחצו"><b>B</b> הדגשה</button>
+          <button class="g" id="cH" title="סמנו מילים ולחצו">🖍 צבע</button>
+          <button class="g" id="cC" title="הסר הדגשות מהמילים המסומנות">✖ נקה</button>
+          <button class="g" id="cSplit" title="שימו את הסמן במקום החיתוך">✂ פצל שורה</button>
+          <button class="g" id="cMerge" title="מאחד את השורה הנוכחית עם הבאה">⤵ מזג עם הבאה</button>
+          <label class="hint"><input type="checkbox" id="cFollow" checked style="accent-color:var(--brand)"> גלילה עם הסרטון</label>
+          <span style="flex:1"></span>
+          <button class="g" id="cSave">💾 שמור</button>
+          <button class="g" id="cSrt">⬇ SRT</button>
+          <button class="g" id="cJson">⬇ JSON</button>
+          <span class="hint" id="cStat"></span>
         </div>
-      </div>
-      <div class="row" style="margin-top:12px"><button class="b" id="send">הוסף הערה ➕</button><span class="hint" id="dhint"></span></div>
-    </div>
-    <div id="recent"></div>
-  </section>
+        <div id="capList"></div>
+      </aside></div>
 
-  <section id="list" class="hidden">
-    <div class="row" style="margin-bottom:10px">
-      <button class="g" id="copy">📎 העתק הכול כטקסט</button>
-      <label class="hint"><input type="checkbox" id="showDone" style="accent-color:var(--brand)"> הצג גם הערות שטופלו</label>
-      <span class="hint">לחיצה על הטיימקוד קופצת לשם בסרטון</span>
+      <div class="card speed row">
+        <b>⚡ מהירות</b>
+        <button class="g" id="spM" aria-label="האט">−</button>
+        <input type="range" id="spR" min="0.5" max="2" step="0.1" value="1" style="flex:1;min-width:120px;accent-color:var(--brand)">
+        <button class="g" id="spP" aria-label="הגבר">+</button>
+        <span class="tc" id="spV">1.0x</span>
+        <button class="g" id="spReset">איפוס</button>
+      </div>
     </div>
-    <div id="all"></div>
-  </section>
-  <div id="sendbox" style="margin:22px 0 8px;padding:14px;border:2px solid var(--brand);border-radius:16px;background:var(--soft);text-align:center">
-    <button class="b" id="waSend" style="font-size:18px;padding:12px 26px">✅ סיימתי תיקונים – שלח לתיקון</button>
-    <div class="hint" id="waHint" style="margin-top:6px">כל ההערות הפתוחות יישלחו ישירות לתור התיקונים של הסוכן (בלי וואטסאפ).</div>
-    <textarea id="waText" readonly class="hidden" style="width:100%;min-height:160px;margin-top:10px;direction:rtl"></textarea>
+
+    <div class="notes-col">
+      <div class="tabs">
+        <button class="tab on" data-t="write">✍️ כתיבת הערות</button>
+        <button class="tab" data-t="list">📋 כל ההערות (<span id="cnt">0</span>)</button>
+      </div>
+
+      <section id="write">
+        <div class="card draft" id="draftCard">
+          <div class="row">
+            <span class="hint">טיימקוד:</span>
+            <input class="tc" id="dtc" value="0:00" title="אפשר לערוך ידנית">
+            <button class="g" id="sync">⏱ קח את הזמן הנוכחי</button>
+            <button class="g" id="back">⟲ 3 שניות אחורה</button>
+            <button class="g rec" id="rec">🎙 הקלט הערה קולית</button><span class="hint" id="recT"></span>
+            <button class="g" id="snap">📸 צלם פריים</button>
+            <button class="g" id="attach">📎 צרף קבצים / תמונות</button><input type="file" id="fin" multiple hidden>
+          </div>
+          <textarea id="dtxt" placeholder="עצרו את הסרטון — הטיימקוד נקבע אוטומטית. כתבו כאן מה לתקן…  (Ctrl/⌘+Enter לשליחה). אפשר להוסיף כמה הערות שרוצים."></textarea>
+          <div id="dfiles" class="files"></div>
+          <div class="hint drop-hint" style="margin-top:6px">אפשר גם לגרור קבצים לכאן או להדביק תמונה (Ctrl/⌘+V)</div>
+          <div class="row" style="margin-top:10px">
+            <span class="hint">סוג:</span>
+            <div class="scope">
+              <label><input type="radio" name="scope" value="" checked><span>לא סימנתי — תחליט</span></label>
+              <label><input type="radio" name="scope" value="one"><span>רק כאן</span></label>
+              <label><input type="radio" name="scope" value="general"><span>הוראה כללית (בכל הסרטונים)</span></label>
+            </div>
+          </div>
+          <div class="row" style="margin-top:12px"><button class="b" id="send">הוסף הערה ➕</button><span class="hint" id="dhint"></span></div>
+        </div>
+        <div id="recent"></div>
+      </section>
+
+      <section id="list" class="hidden">
+        <div class="row" style="margin-bottom:10px">
+          <button class="g" id="copy">📎 העתק הכול כטקסט</button>
+          <label class="hint"><input type="checkbox" id="showDone" style="accent-color:var(--brand)"> הצג גם הערות שטופלו</label>
+          <span class="hint">לחיצה על הטיימקוד קופצת לשם בסרטון</span>
+        </div>
+        <div id="all"></div>
+      </section>
+      <div id="sendbox" style="margin:22px 0 8px;padding:14px;border:2px solid var(--brand);border-radius:16px;background:var(--soft);text-align:center">
+        <button class="b" id="waSend" style="font-size:18px;padding:12px 26px">✅ סיימתי תיקונים – שלח לתיקון</button>
+        <div class="hint" id="waHint" style="margin-top:6px">כל ההערות הפתוחות יישלחו ישירות לתור התיקונים של הסוכן (בלי וואטסאפ).</div>
+        <textarea id="waText" readonly class="hidden" style="width:100%;min-height:160px;margin-top:10px;direction:rtl"></textarea>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -226,10 +283,10 @@ const bookOf=file=>books.find(b=>b.versions.some(x=>x.file===file));
 function openCount(b){return notes.filter(n=>n.status!=='done'&&b.versions.some(x=>x.file===n.video)).length}
 function renderBooks(){
   $('books').innerHTML=books.map(b=>{const c=openCount(b);
-    return `<button class="book ${b.id===curBook?'on':''} ${c?'has':''}" data-book="${esc(b.id)}">
+    return `<button class="book ${b.id===curBook?'on':''} ${c?'has':''}" data-book="${esc(b.id)}" title="${esc(b.title||b.name||b.id)}">
       <img src="${esc(b.poster)}" alt="">
       <span class="cnt" title="הערות פתוחות">${c}</span>
-      <span class="bn">${esc(b.name||b.id)}</span><span class="bt">${esc(b.title)}</span><span class="bd">${esc(b.duration)}</span></button>`}).join('');
+      <span class="bmeta"><span class="bn">${esc(b.name||b.id)}</span><span class="bt">${esc(b.title)}</span><span class="bd">${esc(b.duration)}</span></span></button>`}).join('');
 }
 function selectBook(id,file){
   const b=books.find(x=>x.id===id)||books[0];curBook=b.id;
@@ -475,7 +532,7 @@ function render(){
 }
 document.addEventListener('click',e=>{
   const s=e.target.closest('[data-seek]');
-  if(s){v.currentTime=+s.dataset.seek;v.scrollIntoView({behavior:'smooth',block:'center'});return}
+  if(s){v.currentTime=+s.dataset.seek;if(window.matchMedia('(max-width:999px)').matches)v.scrollIntoView({behavior:'smooth',block:'center'});return}
   const d=e.target.closest('[data-del]');
   if(d&&confirm('למחוק את ההערה?')){commit(list=>list.filter(n=>n.id!=d.dataset.del));return}
   const ed=e.target.closest('[data-edit]');
@@ -548,8 +605,11 @@ document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
   $('write').classList.toggle('hidden',b.dataset.t!=='write');
   $('list').classList.toggle('hidden',b.dataset.t!=='list');
 });
+const isTyping=el=>!!(el&&(el.isContentEditable||el.closest&&el.closest('textarea,input,select,button,[contenteditable]')));
 document.addEventListener('keydown',e=>{
-  if(e.code==='Space'&&!/TEXTAREA|INPUT|BUTTON|SELECT/.test(document.activeElement.tagName)){e.preventDefault();v.paused?v.play():v.pause()}
+  if(e.code!=='Space')return;
+  if(isTyping(document.activeElement)||isTyping(e.target))return;
+  e.preventDefault();v.paused?v.play():v.pause();
 });
 
 /* ---------- מהירות ---------- */
