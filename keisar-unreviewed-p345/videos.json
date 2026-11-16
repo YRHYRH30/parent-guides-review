@@ -1,0 +1,43 @@
+{
+  "books": [
+    {
+      "id": "seg1-cont",
+      "name": "קטע 1 (המשך)",
+      "title": "קטע 1 (המשך) — מ־0:45 עד הסוף (3:11) · בסרט המלא 0:45–3:11",
+      "poster": "keisar345-seg1-cont-poster.jpg",
+      "duration": "2:25",
+      "versions": [
+        {
+          "file": "keisar345-seg1-cont-v1.mp4",
+          "label": "v1 מקורי (ואטסאפ) (הנוכחית)"
+        }
+      ]
+    },
+    {
+      "id": "seg3-cont",
+      "name": "קטע 3 (המשך)",
+      "title": "קטע 3 (המשך) — מ־0:41 עד הסוף (3:00) · בסרט המלא 7:04–9:23",
+      "poster": "keisar345-seg3-cont-poster.jpg",
+      "duration": "2:20",
+      "versions": [
+        {
+          "file": "keisar345-seg3-cont-v1.mp4",
+          "label": "v1 מקורי (ואטסאפ) (הנוכחית)"
+        }
+      ]
+    },
+    {
+      "id": "seg4",
+      "name": "קטע 4",
+      "title": "קטע 4 — מההתחלה עד הסוף (3:24) · בסרט המלא 9:23–12:47",
+      "poster": "keisar345-seg4-poster.jpg",
+      "duration": "3:24",
+      "versions": [
+        {
+          "file": "keisar345-seg4-v1.mp4",
+          "label": "v1 מקורי (ואטסאפ) (הנוכחית)"
+        }
+      ]
+    }
+  ]
+}
