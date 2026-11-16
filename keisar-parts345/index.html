@@ -165,6 +165,34 @@ body.hascap #capPanel{display:block}
   .notes-col .drop-hint{display:none}
   .notes-col textarea{min-height:64px}
 }
+
+/* ---- טיימליין תיקונים (אופציונלי, לפי מערך fixes) ---- */
+.fixesbar{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:8px 10px 10px;margin:0 0 10px;flex:none}
+.fixesbar.hidden{display:none}
+.fx-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px}
+.fx-toolbar .g{padding:4px 10px;font-size:13px}
+.fx-toolbar #fxMode.on{background:var(--btn);color:#fff;border-color:var(--btn)}
+.fx-now{font-size:13px;font-weight:700;color:var(--brand);min-width:0;flex:1}
+.fx-track{position:relative;height:28px;margin:2px 0 0;background:var(--soft);border:1px solid var(--line);border-radius:8px;cursor:pointer;direction:ltr;overflow:visible;touch-action:none}
+.fx-ranges,.fx-prog,.fx-marks,.fx-head{position:absolute;top:0;bottom:0;left:0}
+.fx-ranges{right:0;pointer-events:none}
+.fx-range{position:absolute;top:6px;bottom:6px;background:var(--accent);opacity:.45;border-radius:3px}
+.fixesbar.only .fx-range{opacity:.8}
+.fx-prog{top:0;bottom:0;width:0;background:rgba(90,58,18,.18);border-radius:8px 0 0 8px;pointer-events:none}
+.fx-head{top:-2px;bottom:-2px;width:2px;background:var(--brand);border-radius:2px;transform:translateX(-1px);pointer-events:none;z-index:2}
+.fx-marks{right:0;pointer-events:none}
+.fx-mark{position:absolute;top:-2px;bottom:-2px;width:12px;margin-left:-6px;padding:0;border:0;background:transparent;cursor:pointer;pointer-events:auto;z-index:3}
+.fx-mark::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:3px;margin-left:-1.5px;background:var(--brand);border-radius:2px;box-shadow:0 0 0 1px #fff}
+.fx-mark:hover::before,.fx-mark.on::before{background:var(--accent);width:5px;margin-left:-2.5px}
+.fx-mark .fx-tip{display:none;position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font:12px/1.3 Heebo,system-ui,sans-serif;padding:5px 8px;border-radius:8px;white-space:nowrap;max-width:260px;overflow:hidden;text-overflow:ellipsis;direction:rtl;z-index:5;pointer-events:none}
+.fx-mark:hover .fx-tip,.fx-mark:focus .fx-tip{display:block}
+.fx-list{display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:6px;padding-bottom:2px}
+.fx-list.hidden{display:none}
+.fx-chip{flex:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:3px 10px;font:12px/1.3 Heebo,system-ui,sans-serif;color:var(--ink);cursor:pointer;white-space:nowrap}
+.fx-chip.on{background:var(--btn);color:#fff;border-color:var(--btn)}
+@media(min-width:1000px){
+  .fixesbar{margin:0;padding:6px 10px 8px}
+}
 </style>
 </head>
 <body>
@@ -173,7 +201,7 @@ body.hascap #capPanel{display:block}
     <img class="logo" src="logo.png" alt="מעשה בקיסר ומלך">
     <div class="ttl">
       <h1>מעשה בקיסר ומלך — חלקים 3–5</h1>
-      <div class="sub">מחולק לקטעים של ~3–4 דק׳ · קטע 1 0:00 · קטע 2 3:11 · קטע 3 6:23 · קטע 4 9:23 · גם מלא 12:47. עוצרים · כותבים · ממשיכים.</div>
+      <div class="sub">מחולק לקטעים של ~3–4 דק׳ · קטע 1 0:00 · קטע 2 3:11 · קטע 3 6:23 · קטע 4 9:23 · גם מלא 12:47. עוצרים · כותבים · ממשיכים. בסרטון המלא: סימון על הטיימליין לכל תיקון, ומצב «רק תיקונים».</div>
     </div>
     <span id="status"></span>
   </header>
@@ -203,6 +231,24 @@ body.hascap #capPanel{display:block}
         </div>
         <div id="capList"></div>
       </aside></div>
+
+
+      <div id="fixesbar" class="fixesbar hidden" hidden>
+        <div class="fx-toolbar">
+          <button type="button" class="g" id="fxMode" aria-pressed="false">רק תיקונים</button>
+          <button type="button" class="g" id="fxPrev">הקודם</button>
+          <button type="button" class="g" id="fxNext">הבא</button>
+          <label class="hint"><input type="checkbox" id="fxAuto" style="accent-color:var(--brand)"> קפיצה אוטומטית לתיקון הבא</label>
+          <span id="fxNow" class="fx-now"></span>
+        </div>
+        <div id="fxTrack" class="fx-track" role="slider" aria-label="טיימליין תיקונים">
+          <div id="fxRanges" class="fx-ranges"></div>
+          <div id="fxProg" class="fx-prog"></div>
+          <div id="fxMarks" class="fx-marks"></div>
+          <div id="fxHead" class="fx-head"></div>
+        </div>
+        <div id="fxList" class="fx-list hidden" hidden></div>
+      </div>
 
       <div class="card speed row">
         <b>⚡ מהירות</b>
@@ -630,9 +676,13 @@ window.addEventListener('focus',()=>{if(!busy&&!dtxt.value.trim())load()});
 
 /* ---------- אתחול ---------- */
 (async()=>{
-  books=(await (await fetch('videos.json')).json()).books;
+  const data=await (await fetch('videos.json')).json();
+  books=data.books;
   await load();
-  selectBook(LS('book')||books[0].id);
+  const defBook=()=>(books.find(b=>b.default)||books[0]).id;
+  const rev=data.defaults_rev;
+  if(rev && LS('defaults_rev')!==String(rev)){LS('defaults_rev',String(rev));selectBook(defBook());}
+  else selectBook(LS('book')||defBook());
 })();
 </script>
 <script>
@@ -702,6 +752,139 @@ const base=()=>capFile.replace(/\.[^.]+$/,'')+'_captions';
 $('cSrt').onclick=()=>{syncAll();dl(base()+'.srt',cap.lines.map((l,i)=>`${i+1}\n${srtT(l.s)} --> ${srtT(l.e)}\n${l.words.map(w=>{let t=w.w;if(w.b)t='<b>'+t+'</b>';if(w.h)t='<font color="#FFE600">'+t+'</font>';return t}).join(' ')}\n`).join('\n'),'text/plain')};
 $('cJson').onclick=()=>{syncAll();dl(base()+'.json',JSON.stringify(cap,null,1),'application/json')};
 addEventListener('beforeunload',e=>{if(dirty){save();e.preventDefault();e.returnValue=''}});
+})();
+</script>
+
+<script>
+/* ---------- טיימליין תיקונים: מערך fixes אופציונלי בגרסה או בסרטון ---------- */
+(function(){
+  const bar=$('fixesbar'); if(!bar)return;
+  const track=$('fxTrack'), marks=$('fxMarks'), ranges=$('fxRanges'), prog=$('fxProg'), head=$('fxHead');
+  const nowEl=$('fxNow'), list=$('fxList'), btnMode=$('fxMode'), btnPrev=$('fxPrev'), btnNext=$('fxNext'), chkAuto=$('fxAuto');
+  let fixes=[], fxOnly=false, fxAuto=false, fxIdx=-1, jumping=false;
+
+  const curVer=()=>{
+    const b=books.find(x=>x.id===curBook); if(!b)return null;
+    return b.versions.find(x=>x.file===curFile)||b.versions[b.versions.length-1];
+  };
+  function loadFixes(){
+    const b=books.find(x=>x.id===curBook);
+    const ver=curVer();
+    const raw=(ver&&ver.fixes)||(b&&b.fixes)||[];
+    return raw.map((f,i)=>({
+      id:String(f.id||i),
+      t:+(f.t!=null?f.t:f.start||0),
+      end:+(f.end!=null?f.end:(f.t!=null?f.t:f.start||0)),
+      label:f.label||String(f.id||'')
+    })).filter(f=>isFinite(f.t)).sort((a,c)=>a.t-c.t);
+  }
+  function dur(){return (v.duration&&isFinite(v.duration)&&v.duration>0)?v.duration:0}
+  function pct(t){const d=dur();return d?Math.max(0,Math.min(100,t/d*100)):0}
+  function atTime(t){
+    let i=-1;
+    fixes.forEach((f,k)=>{if(t>=f.t-0.04 && t<f.end+0.04)i=k});
+    if(i<0){
+      let best=-1,bd=1e9;
+      fixes.forEach((f,k)=>{const d=Math.abs(t-f.t);if(d<0.25&&d<bd){best=k;bd=d}});
+      i=best;
+    }
+    return i;
+  }
+  function setNow(i){
+    fxIdx=i;
+    [...marks.children].forEach((el,k)=>el.classList.toggle('on',k===i));
+    [...list.querySelectorAll('.fx-chip')].forEach((el,k)=>el.classList.toggle('on',k===i));
+    if(i>=0&&fixes[i]){
+      nowEl.textContent=`${fmt(fixes[i].t)}  ${fixes[i].label}`;
+      const chip=list.querySelectorAll('.fx-chip')[i];
+      if(chip&&fxOnly)chip.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});
+    }else nowEl.textContent=fixes.length?`${fixes.length} תיקונים על הטיימליין`:'';
+  }
+  function jumpTo(i,play){
+    if(i<0||i>=fixes.length)return;
+    jumping=true; fxIdx=i;
+    v.currentTime=Math.max(0,fixes[i].t);
+    setNow(i);
+    if(play!==false)v.play().catch(()=>{});
+    setTimeout(()=>{jumping=false},250);
+  }
+  function renderFixes(){
+    fixes=loadFixes();
+    const on=!!fixes.length;
+    bar.hidden=!on; bar.classList.toggle('hidden',!on);
+    if(!on){nowEl.textContent='';marks.innerHTML='';ranges.innerHTML='';list.innerHTML='';return}
+    ranges.innerHTML=fixes.map(f=>`<i class="fx-range" style="left:${pct(f.t)}%;width:${Math.max(0.25,pct(f.end)-pct(f.t))}%"></i>`).join('');
+    marks.innerHTML=fixes.map((f,i)=>`<button type="button" class="fx-mark" data-fx="${i}" style="left:${pct(f.t)}%" aria-label="${esc(f.label)}"><span class="fx-tip">${esc(f.label)}</span></button>`).join('');
+    list.innerHTML=fixes.map((f,i)=>`<button type="button" class="fx-chip" data-fx="${i}">${esc(f.label)}</button>`).join('');
+    setNow(atTime(v.currentTime||0));
+    paint();
+  }
+  function paint(){
+    if(!fixes.length)return;
+    const t=v.currentTime||0, p=pct(t);
+    prog.style.width=p+'%';
+    head.style.left=p+'%';
+    if(!jumping) setNow(atTime(t));
+  }
+  function next(dir){
+    if(!fixes.length)return;
+    let i=fxIdx;
+    if(i<0){
+      const t=v.currentTime||0;
+      if(dir>0){i=fixes.findIndex(f=>f.t>t+0.05);if(i<0)i=0}
+      else{i=0;for(let k=0;k<fixes.length;k++)if(fixes[k].t<t-0.05)i=k}
+    }else i=i+dir;
+    if(i<0)i=fixes.length-1;
+    if(i>=fixes.length)i=0;
+    jumpTo(i,true);
+  }
+
+  btnMode.onclick=()=>{
+    fxOnly=!fxOnly;
+    btnMode.classList.toggle('on',fxOnly);
+    btnMode.setAttribute('aria-pressed',fxOnly?'true':'false');
+    bar.classList.toggle('only',fxOnly);
+    list.hidden=!fxOnly; list.classList.toggle('hidden',!fxOnly);
+    if(fxOnly&&fixes.length){if(fxIdx<0)jumpTo(0,true);else jumpTo(fxIdx,true)}
+  };
+  btnPrev.onclick=()=>next(-1);
+  btnNext.onclick=()=>next(1);
+  chkAuto.onchange=()=>{fxAuto=chkAuto.checked};
+  marks.addEventListener('click',e=>{const b=e.target.closest('[data-fx]');if(!b)return;e.stopPropagation();jumpTo(+b.dataset.fx,true)});
+  list.addEventListener('click',e=>{const b=e.target.closest('[data-fx]');if(b)jumpTo(+b.dataset.fx,true)});
+  function seekFromEvent(e){
+    const d=dur(); if(!d)return;
+    const r=track.getBoundingClientRect();
+    const x=(e.touches?e.touches[0].clientX:e.clientX)-r.left;
+    v.currentTime=Math.max(0,Math.min(d,x/r.width*d));
+  }
+  track.addEventListener('click',seekFromEvent);
+  track.addEventListener('pointerdown',e=>{
+    if(e.target.closest('[data-fx]'))return;
+    track.setPointerCapture(e.pointerId);
+    seekFromEvent(e);
+    const move=ev=>seekFromEvent(ev);
+    const up=()=>{track.removeEventListener('pointermove',move);track.removeEventListener('pointerup',up)};
+    track.addEventListener('pointermove',move);track.addEventListener('pointerup',up);
+  });
+
+  v.addEventListener('timeupdate',()=>{
+    paint();
+    if(!fxAuto||!fixes.length||v.paused||jumping)return;
+    const t=v.currentTime;
+    const i=fxIdx>=0?fxIdx:atTime(t);
+    if(i<0)return;
+    const f=fixes[i];
+    if(t>=f.end-0.04){
+      if(i<fixes.length-1) jumpTo(i+1,true);
+      else {v.pause(); setNow(i)}
+    }
+  });
+  v.addEventListener('loadedmetadata',renderFixes);
+
+  const _sel=selectBook;
+  selectBook=function(id,file){_sel(id,file);renderFixes()};
+  setTimeout(renderFixes,0);
 })();
 </script>
 </body>
