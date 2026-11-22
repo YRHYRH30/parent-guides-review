@@ -2,7 +2,7 @@
   "site_id": "tesla-branding",
   "page_title": "טסלה: מיתוג מול פרסום",
   "heading": "טסלה: מיתוג מול פרסום",
-  "subtitle": "עוצרים · כותבים · ממשיכים — הטיימקוד נקבע לבד.",
+  "subtitle": "v5 · עוצרים · כותבים · ממשיכים — הטיימקוד נקבע לבד.",
   "logo": "logo.png",
   "logo_alt": "Crunch",
   "store_url": "https://riddle-store-yh.netlify.app/api/store?id=",
@@ -30,7 +30,61 @@
       "versions": [
         {
           "file": "tesla-v4.mp4",
-          "label": "v4 (הנוכחית)"
+          "label": "v4"
+        },
+        {
+          "file": "tesla-v5.mp4",
+          "label": "v5 (הנוכחית)",
+          "fixes": [
+            {
+              "id": "gift-cover",
+              "t": 1.3,
+              "end": 3.1,
+              "label": "כוסה כיתוב «טסלה במתנה» — רק הטיפוגרפיה שלנו"
+            },
+            {
+              "id": "official-type",
+              "t": 6.2,
+              "end": 9.7,
+              "label": "הוסרו כיתובי 0–60 ו-Redesigned Wheels; שוט נקי"
+            },
+            {
+              "id": "empty",
+              "t": 13.9,
+              "end": 17.2,
+              "label": "בלי ריבוע וסופרבול; «לא» בצהוב, «הייתה שם» באדום"
+            },
+            {
+              "id": "tweet-box",
+              "t": 20.4,
+              "end": 23.5,
+              "label": "הוסר ריבוע I hate advertising מהבמה"
+            },
+            {
+              "id": "headlines",
+              "t": 23.5,
+              "end": 25.3,
+              "label": "ציוץ וכותרות ב«כל אמירה שלו הופכת לכותרת»"
+            },
+            {
+              "id": "screen",
+              "t": 53.4,
+              "end": 59.9,
+              "label": "המסך הגדול במקום נסיעה רגילה"
+            },
+            {
+              "id": "social",
+              "t": 59.9,
+              "end": 63.3,
+              "label": "מצלמים טסלה + העלאה לרשת"
+            },
+            {
+              "id": "gift-end",
+              "t": 66.7,
+              "end": 69.9,
+              "label": "כיסוי כיתוב סיטי קאר בסיום"
+            }
+          ]
         }
       ]
     }
