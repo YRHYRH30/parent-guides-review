@@ -1,0 +1,43 @@
+{
+  "site_id": "tesla-branding",
+  "page_title": "טסלה: מיתוג מול פרסום",
+  "heading": "טסלה: מיתוג מול פרסום",
+  "subtitle": "עוצרים · כותבים · ממשיכים — הטיימקוד נקבע לבד.",
+  "logo": "logo.png",
+  "logo_alt": "Crunch",
+  "store_url": "https://riddle-store-yh.netlify.app/api/store?id=",
+  "notes_key": "36065fa3-495e-4c74-8d84-3e9d981dd54d",
+  "theme": {
+    "BRAND": "#1c1e24",
+    "BTN": "#1c1e24",
+    "ACCENT": "#f4e04d",
+    "ACCENT_INK": "#1c1e24",
+    "ACCENT_SOFT": "#fff8cc",
+    "BG1": "#f3f4f7",
+    "BG2": "#fafbfc",
+    "SOFT": "#eef0f4",
+    "LINE": "#e4e6ed",
+    "RING": "rgba(28,30,36,.22)",
+    "SHADOW": "rgba(28,30,36,.40)",
+    "GLOW": "rgba(244,224,77,.30)"
+  },
+  "videos": [
+    {
+      "id": "tesla-v4",
+      "name": "טסלה",
+      "title": "טסלה: מיתוג מול פרסום",
+      "poster": "tesla-poster.jpg",
+      "versions": [
+        {
+          "file": "tesla-v4.mp4",
+          "label": "v4 (הנוכחית)"
+        }
+      ]
+    }
+  ],
+  "project": "טסלה: מיתוג מול פרסום",
+  "client": "Crunch",
+  "agent_name": "סטודיו וידאו",
+  "agent_id": "b65dc4ff-6f87-482b-8cfe-184b1ecf543e",
+  "wa_number": "972559189249"
+}

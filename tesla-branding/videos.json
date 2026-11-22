@@ -1,0 +1,17 @@
+{
+  "books": [
+    {
+      "id": "tesla-v4",
+      "name": "טסלה",
+      "title": "טסלה: מיתוג מול פרסום",
+      "poster": "tesla-poster.jpg",
+      "duration": "1:14",
+      "versions": [
+        {
+          "file": "tesla-v4.mp4",
+          "label": "v4 (הנוכחית)"
+        }
+      ]
+    }
+  ]
+}
