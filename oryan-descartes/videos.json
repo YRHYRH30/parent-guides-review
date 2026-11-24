@@ -1,0 +1,18 @@
+{
+  "books": [
+    {
+      "id": "oryan",
+      "name": "אוריאן",
+      "title": "אוריאן לייטרסדורף · דקארט · אמזון",
+      "poster": "oryan-poster.jpg",
+      "duration": "1:16",
+      "versions": [
+        {
+          "file": "oryan-v1.mp4",
+          "label": "v1 (הנוכחית)"
+        }
+      ]
+    }
+  ],
+  "defaults_rev": "oryan-1"
+}

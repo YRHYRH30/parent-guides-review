@@ -1,0 +1,44 @@
+{
+ "site_id": "oryan-descartes",
+ "page_title": "אוריאן לייטרסדורף · דקארט · אמזון",
+ "heading": "אוריאן · דקארט · אמזון",
+ "subtitle": "v1 · עוצרים · כותבים · ממשיכים — הטיימקוד נקבע לבד.",
+ "logo": "logo.png",
+ "logo_alt": "Crunch",
+ "store_url": "https://riddle-store-yh.netlify.app/api/store?id=",
+ "notes_key": "a2e9f930-47bb-40c3-984b-c610111739ff",
+ "theme": {
+  "BRAND": "#1c1e24",
+  "BTN": "#1c1e24",
+  "ACCENT": "#f4e04d",
+  "ACCENT_INK": "#1c1e24",
+  "ACCENT_SOFT": "#fff8cc",
+  "BG1": "#f3f4f7",
+  "BG2": "#fafbfc",
+  "SOFT": "#eef0f4",
+  "LINE": "#e4e6ed",
+  "RING": "rgba(28,30,36,.22)",
+  "SHADOW": "rgba(28,30,36,.40)",
+  "GLOW": "rgba(244,224,77,.30)"
+ },
+ "videos": [
+  {
+   "id": "oryan",
+   "name": "אוריאן",
+   "title": "אוריאן לייטרסדורף · דקארט · אמזון",
+   "poster": "oryan-poster.jpg",
+   "versions": [
+    {
+     "file": "oryan-v1.mp4",
+     "label": "v1 (הנוכחית)"
+    }
+   ]
+  }
+ ],
+ "project": "אוריאן · דקארט · אמזון",
+ "client": "Crunch",
+ "agent_name": "סטודיו וידאו",
+ "agent_id": "b65dc4ff-6f87-482b-8cfe-184b1ecf543e",
+ "wa_number": "972559189249",
+ "defaults_rev": "oryan-1"
+}
