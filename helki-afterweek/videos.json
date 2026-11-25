@@ -1,0 +1,144 @@
+{
+  "books": [
+    {
+      "id": "afterweek",
+      "name": "הרצף המלא",
+      "title": "אחרי שבוע",
+      "poster": "afterweek-poster.jpg",
+      "duration": "0:26",
+      "versions": [
+        {
+          "file": "afterweek-previs-blender.mp4",
+          "label": "פריויז בליינדר"
+        },
+        {
+          "file": "afterweek-seedance-720.mp4",
+          "label": "סידאנס 720 (הנוכחית)",
+          "fixes": [
+            {
+              "t": 0,
+              "label": "שוט 1 · משאית"
+            },
+            {
+              "t": 4,
+              "label": "שוט 2 · תא הנהג"
+            },
+            {
+              "t": 8,
+              "label": "שוט 3 · הייטק"
+            },
+            {
+              "t": 12,
+              "label": "שוט 4 · מנהל עבודה"
+            },
+            {
+              "t": 16,
+              "label": "שוט 5 · סטודנט"
+            },
+            {
+              "t": 19,
+              "label": "שוט 6 · מנהל משרד"
+            },
+            {
+              "t": 22,
+              "label": "שוט 7 · סוף השבוע"
+            }
+          ]
+        }
+      ],
+      "default": true
+    },
+    {
+      "id": "shot-01",
+      "name": "שוט 1 · משאית",
+      "title": "שוט 1 · משאית (4 שניות)",
+      "poster": "shot-01-truck.jpg",
+      "duration": "0:04",
+      "versions": [
+        {
+          "file": "shot-01-truck.mp4",
+          "label": "גרסה 1"
+        }
+      ]
+    },
+    {
+      "id": "shot-02",
+      "name": "שוט 2 · תא הנהג",
+      "title": "שוט 2 · תא הנהג (4 שניות)",
+      "poster": "shot-02-cab.jpg",
+      "duration": "0:04",
+      "versions": [
+        {
+          "file": "shot-02-cab.mp4",
+          "label": "גרסה 1"
+        }
+      ]
+    },
+    {
+      "id": "shot-03",
+      "name": "שוט 3 · הייטק",
+      "title": "שוט 3 · הייטק (4 שניות)",
+      "poster": "shot-03-hitech.jpg",
+      "duration": "0:04",
+      "versions": [
+        {
+          "file": "shot-03-hitech.mp4",
+          "label": "גרסה 1"
+        }
+      ]
+    },
+    {
+      "id": "shot-04",
+      "name": "שוט 4 · מנהל עבודה",
+      "title": "שוט 4 · מנהל עבודה (4 שניות)",
+      "poster": "shot-04-site.jpg",
+      "duration": "0:04",
+      "versions": [
+        {
+          "file": "shot-04-site.mp4",
+          "label": "גרסה 1"
+        }
+      ]
+    },
+    {
+      "id": "shot-05",
+      "name": "שוט 5 · סטודנט",
+      "title": "שוט 5 · סטודנט (3 שניות)",
+      "poster": "shot-05-student.jpg",
+      "duration": "0:03",
+      "versions": [
+        {
+          "file": "shot-05-student.mp4",
+          "label": "גרסה 1"
+        }
+      ]
+    },
+    {
+      "id": "shot-06",
+      "name": "שוט 6 · מנהל משרד",
+      "title": "שוט 6 · מנהל משרד (3 שניות)",
+      "poster": "shot-06-office.jpg",
+      "duration": "0:03",
+      "versions": [
+        {
+          "file": "shot-06-office.mp4",
+          "label": "גרסה 1"
+        }
+      ]
+    },
+    {
+      "id": "shot-07",
+      "name": "שוט 7 · סוף השבוע",
+      "title": "שוט 7 · סוף השבוע, מפוצל (4 שניות)",
+      "poster": "shot-07-split.jpg",
+      "duration": "0:04",
+      "versions": [
+        {
+          "file": "shot-07-split.mp4",
+          "label": "גרסה 1"
+        }
+      ]
+    }
+  ],
+  "defaults_rev": 1
+}
